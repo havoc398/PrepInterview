@@ -9,8 +9,13 @@ const Login = () => {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {-
     e.preventDefault()
+    handleLogin({ email, password })
+  }
+
+  if (loading) {
+    return (<main><h1></h1>Loading.....</main>)
   }
 
 
@@ -28,8 +33,8 @@ const Login = () => {
           <div className="input-group">
             <label htmlFor="password">Password</label>
             <input
-            onChange={(e)}
-            type="password" id='password' name='password' placeholder='Enter the password' />
+              onChange={(e) => { setPassword(e.target.value) }}
+              type="password" id='password' name='password' placeholder='Enter the password' />
           </div>
 
           <button className='button primary-button'>Login</button>

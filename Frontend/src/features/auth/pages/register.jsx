@@ -4,6 +4,9 @@ import { useNavigate,Link } from 'react-router'
 const Register = () => {
   
   const navigate = useNavigate()
+  useState[username, setUsername] = useState("")
+  useState[email, setEmail] = useState("")
+  useState[password, setPassword] = useState("")
 
   const handleSubmit = (e) =>{
     e.preventDefault()
@@ -17,7 +20,9 @@ const Register = () => {
           
           <div className="input-group">
             <label htmlFor="username">Username</label>
-            <input type="username" id='username' name='username' placeholder='Enter username' />
+            <input
+             onChange={(e)=>{}}
+             type="username" id='username' name='username' placeholder='Enter username' />
           </div>
           <div className="input-group">
             <label htmlFor="email">Email</label>
